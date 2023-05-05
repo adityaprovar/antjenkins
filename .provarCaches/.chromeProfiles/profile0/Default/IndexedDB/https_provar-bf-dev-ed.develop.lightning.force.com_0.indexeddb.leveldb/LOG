@@ -1,0 +1,3 @@
+2023/05/05-08:25:32.282 3468 Creating DB C:\Users\aditya.shankar\Provar\Workspace6\.provarCaches\.chromeProfiles\profile0\Default\IndexedDB\https_provar-bf-dev-ed.develop.lightning.force.com_0.indexeddb.leveldb since it was missing.
+2023/05/05-08:25:32.286 3468 Reusing MANIFEST C:\Users\aditya.shankar\Provar\Workspace6\.provarCaches\.chromeProfiles\profile0\Default\IndexedDB\https_provar-bf-dev-ed.develop.lightning.force.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/05/05-08:25:33.197 1de8 Manual compaction at level-0 from '\x00\x08\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x09\x00\x00\x00' @ 0 : 0; will stop at (end)
