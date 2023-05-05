@@ -1,0 +1,813 @@
+!SESSION 2023-05-05 07:18:02.214 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_322
+java.vendor=Amazon.com Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -Dcom.provar.devmode=false
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -clean -Dcom.provar.devmode=false
+
+!ENTRY com.atlassian.connector.eclipse.monitor.ui 4 0 2023-05-05 07:18:04.508
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.atlassian.connector.eclipse.monitor.ui [5]
+  Unresolved requirement: Require-Bundle: com.atlassian.connector.eclipse.branding.ui
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.ui 2 0 2023-05-05 07:18:14.454
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2023-05-05 07:18:14.454
+!MESSAGE Commands need a name: plug-in='com.provar.eclipse.ui'
+
+!ENTRY org.eclipse.ui 2 0 2023-05-05 07:18:14.937
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2023-05-05 07:18:14.937
+!MESSAGE Commands need a name: plug-in='com.provar.eclipse.ui'
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-05-05 07:18:18.384
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\aditya.shankar'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 4 0 2023-05-05 07:18:56.281
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.cleanUpCopy(MenuManagerRenderer.java:469)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.cleanUp(MenuManagerRenderer.java:444)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.lambda$0(MenuManagerRenderer.java:416)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:127)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4213)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1037)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1042)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:794)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:410)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.disposeWidget(SWTPartRenderer.java:174)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:943)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$1(PartRenderingEngine.java:871)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:866)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:850)
+	at org.eclipse.ui.internal.WorkbenchWindow$1.handleEvent(WorkbenchWindow.java:331)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4735)
+	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:219)
+	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:38)
+	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
+	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:132)
+	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
+	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
+	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
+	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.e4.ui.model.application.ui.impl.UIElementImpl.setWidget(UIElementImpl.java:267)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.unbindWidget(SWTPartRenderer.java:149)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.disposeWidget(SWTPartRenderer.java:172)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:943)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$1(PartRenderingEngine.java:871)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:866)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:850)
+	at org.eclipse.ui.internal.WorkbenchWindow.hardClose(WorkbenchWindow.java:2117)
+	at org.eclipse.ui.internal.WorkbenchWindow.busyClose(WorkbenchWindow.java:1748)
+	at org.eclipse.ui.internal.WorkbenchWindow.lambda$3(WorkbenchWindow.java:1773)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:72)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1773)
+	at org.eclipse.ui.internal.Workbench$11.run(Workbench.java:1142)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.ui.internal.Workbench.busyClose(Workbench.java:1125)
+	at org.eclipse.ui.internal.Workbench.lambda$4(Workbench.java:1426)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:72)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1426)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1402)
+	at org.eclipse.ui.internal.WorkbenchWindow.busyClose(WorkbenchWindow.java:1744)
+	at org.eclipse.ui.internal.WorkbenchWindow.lambda$3(WorkbenchWindow.java:1773)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:72)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1773)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1782)
+	at org.eclipse.ui.internal.WorkbenchWindow$3.close(WorkbenchWindow.java:523)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.lambda$4(WBWRenderer.java:578)
+	at org.eclipse.swt.events.ShellListener$2.shellClosed(ShellListener.java:102)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:102)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4213)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1037)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1061)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1046)
+	at org.eclipse.swt.widgets.Decorations.closeWidget(Decorations.java:269)
+	at org.eclipse.swt.widgets.Decorations.WM_CLOSE(Decorations.java:1552)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4742)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2142)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4923)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:508)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4841)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2142)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4923)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:508)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4841)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1480)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2142)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4923)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3628)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1158)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1047)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:658)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:557)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:154)
+	at com.provar.eclipse.application.ProvarApplication.start(ProvarApplication.java:83)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:137)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:107)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:657)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:594)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1447)
+
+!ENTRY org.eclipse.ui 2 2 2023-05-05 07:18:56.509
+!MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.json.ui, propertyPage: org.eclipse.wst.json.ui.propertyPage.project.validation)
+!SESSION 2023-05-05 07:40:58.874 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.8.0_322
+java.vendor=Amazon.com Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -Dcom.provar.devmode=false
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -clean -Dcom.provar.devmode=false
+
+!ENTRY com.atlassian.connector.eclipse.monitor.ui 4 0 2023-05-05 07:41:00.583
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: com.atlassian.connector.eclipse.monitor.ui [5]
+  Unresolved requirement: Require-Bundle: com.atlassian.connector.eclipse.branding.ui
+
+	at org.eclipse.osgi.container.Module.start(Module.java:463)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel$2.run(ModuleContainer.java:1845)
+	at org.eclipse.osgi.internal.framework.EquinoxContainerAdaptor$1$1.execute(EquinoxContainerAdaptor.java:136)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1838)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1779)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1743)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1665)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:345)
+
+!ENTRY org.eclipse.ui 2 0 2023-05-05 07:41:17.499
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2023-05-05 07:41:17.499
+!MESSAGE Commands need a name: plug-in='com.provar.eclipse.ui'
+
+!ENTRY org.eclipse.ui 2 0 2023-05-05 07:41:17.860
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2023-05-05 07:41:17.860
+!MESSAGE Commands need a name: plug-in='com.provar.eclipse.ui'
+
+!ENTRY org.eclipse.egit.ui 2 0 2023-05-05 07:41:20.578
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\aditya.shankar'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui.ide 4 4 2023-05-05 07:49:30.899
+!MESSAGE File toolbar contribution item is missing
+
+!ENTRY com.provar.eclipse.ui 1 1 2023-05-05 07:49:31.216
+!MESSAGE TestPlugin loaded.  name: salesforce, from bundle: com.provar.plugins.sf.eclipse.ui
+
+!ENTRY com.provar.eclipse.ui 1 1 2023-05-05 07:49:31.230
+!MESSAGE Test Plugin status changing.  Plugin name: salesforce, tecId: null, old status: unstarted, new status: starting
+
+!ENTRY org.eclipse.ui.ide 4 4 2023-05-05 07:49:32.488
+!MESSAGE File toolbar contribution item is missing
+
+!ENTRY com.provar.eclipse.ui 1 1 2023-05-05 07:49:34.322
+!MESSAGE Start of loadTestCaseMap
+
+!ENTRY com.provar.eclipse.ui 4 4 2023-05-05 07:49:34.354
+!MESSAGE Error loading Test Plan Items / java.lang.NullPointerException: null
+!STACK 0
+java.lang.NullPointerException
+	at com.provar.eclipse.ui.Activator.logException(Activator.java:1207)
+	at com.provar.eclipse.ui.testplans.TestPlanItemRegistryServiceImpl$InitialTestPlanItemLoadThread.run(TestPlanItemRegistryServiceImpl.java:493)
+
+!ENTRY com.provar.eclipse.ui 1 1 2023-05-05 07:49:34.354
+!MESSAGE Start of loadUiScreenMappingCache
+
+!ENTRY com.provar.eclipse.ui 1 1 2023-05-05 07:49:34.361
+!MESSAGE End of loadUiScreenMappingCache - resource folder not found: C:\Users\aditya.shankar\Provar\Workspace6\ant\src\resources
+
+!ENTRY com.provar.eclipse.ui 1 1 2023-05-05 07:49:34.370
+!MESSAGE Processing new TestCase.  Name:  Test Case 1.testcase, isTestCase: true
+
+!ENTRY com.provar.eclipse.ui 1 1 2023-05-05 07:49:34.926
+!MESSAGE TestCaseSettingsForm.updateControlsWithBelay.  Reason: initial, time: 02:19:34.926
+
+!ENTRY com.provar.plugins.sf.eclipse.ui 1 4 2023-05-05 07:49:35.992
+!MESSAGE OrgBrowserView.connect: loadConnectionDetails.name: antnew, loadConnectionDetails: com.provar.core.model.base.java.ConnectionDetailsImpl@7e3d8be7
+
+!ENTRY com.provar.eclipse.ui 1 0 2023-05-05 07:49:35.994
+!MESSAGE ApexConnection.getApexConnection - start.  connectionName: antnew, connectionDetails: com.provar.core.model.base.java.ConnectionDetailsImpl@7e3d8be7, thread: OrgBrowserConnect-antnew
+
+!ENTRY org.eclipse.ui.ide 4 4 2023-05-05 07:49:36.625
+!MESSAGE File toolbar contribution item is missing
+
+!ENTRY org.eclipse.egit.ui 4 0 2023-05-05 07:49:36.733
+!MESSAGE Connecting Git team provider failed. See log for details.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Connecting Git team provider failed. See log for details.
+	at org.eclipse.egit.core.op.ConnectProviderOperation.execute(ConnectProviderOperation.java:114)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard$8.run(GitImportWizard.java:291)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2312)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.importProjects(GitImportWizard.java:298)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard.access$2(GitImportWizard.java:238)
+	at org.eclipse.egit.ui.internal.clone.GitImportWizard$4.run(GitImportWizard.java:208)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
+Contains: Error connecting project ant, no Git repositories found
+!SUBENTRY 1 org.eclipse.egit.core 4 0 2023-05-05 07:49:36.733
+!MESSAGE Connecting Git team provider failed. See log for details.
+!SUBENTRY 2 org.eclipse.egit.core 4 0 2023-05-05 07:49:36.733
+!MESSAGE Error connecting project ant, no Git repositories found
+
+!ENTRY org.eclipse.ui.ide 4 4 2023-05-05 07:49:36.764
+!MESSAGE File toolbar contribution item is missing
+
+!ENTRY com.provar.eclipse.ui 1 1 2023-05-05 07:49:37.126
+!MESSAGE Test Plugin status changing.  Plugin name: salesforce, tecId: IdentifierImpl{id=1}, old status: starting, new status: started
+
+!ENTRY com.provar.eclipse.ui 1 0 2023-05-05 07:49:40.929
+!MESSAGE ++++ Start of load.  Thread: OrgBrowserConnect-antnew, apexConnection: antnew, refreshType: Reuse
+
+!ENTRY com.provar.plugins.sf.eclipse.ui 1 4 2023-05-05 07:49:55.636
+!MESSAGE OrgBrowserView.connectionStateChanging: connectionDetails.name: antnew, loadConnectionDetails.name: antnew, connectionDetails: com.provar.core.model.base.java.ConnectionDetailsImpl@7e3d8be7, loadConnectionDetails: com.provar.core.model.base.java.ConnectionDetailsImpl@7e3d8be7, loadType: Reuse, loadReason: null, fromLoadState: null, toLoadState: LOADING, loadOutcome: null, loadException: null
+
+!ENTRY com.provar.eclipse.ui 1 0 2023-05-05 07:49:56.233
+!MESSAGE Requesting Salesforce metadata.  Request id: 09S2w000004TvDEEA0, Object: EngagementChannelWorkType and 13 more
+
+!ENTRY com.provar.eclipse.ui 1 0 2023-05-05 07:49:56.238
+!MESSAGE Requesting Salesforce metadata.  Request id: 09S2w000004TvDJEA0, Object: AccountContactRole and 61 more
+
+!ENTRY com.provar.eclipse.ui 1 0 2023-05-05 07:49:56.238
+!MESSAGE Requesting Salesforce metadata.  Request id: 09S2w000004TvDOEA0, Object: AccountCleanInfo and 65 more
+
+!ENTRY com.provar.eclipse.ui 1 0 2023-05-05 07:49:56.314
+!MESSAGE Requesting Salesforce metadata.  Request id: 09S2w000004TvDTEA0, Object: AssetActionSource and 63 more
+
+!ENTRY com.provar.eclipse.ui 2 0 2023-05-05 07:50:05.863
+!MESSAGE Salesforce Object not found for Builtin Tab.  Key prefix: WorkBadgeDefinition
+
+!ENTRY com.provar.eclipse.ui 2 0 2023-05-05 07:50:05.866
+!MESSAGE Salesforce Object not found for Builtin Tab.  Key prefix: WorkBadge
+
+!ENTRY com.provar.eclipse.ui 2 0 2023-05-05 07:50:05.870
+!MESSAGE Salesforce Object not found for Builtin Tab.  Key prefix: Quote
+
+!ENTRY com.provar.plugins.sf.eclipse.ui 1 4 2023-05-05 07:50:09.968
+!MESSAGE OrgBrowserView.connectionStateChanging: connectionDetails.name: antnew, loadConnectionDetails.name: antnew, connectionDetails: com.provar.core.model.base.java.ConnectionDetailsImpl@7e3d8be7, loadConnectionDetails: com.provar.core.model.base.java.ConnectionDetailsImpl@7e3d8be7, loadType: Reuse, loadReason: null, fromLoadState: LOADING, toLoadState: LOADED, loadOutcome: SUCCESSFUL, loadException: null
+
+!ENTRY com.provar.eclipse.ui 1 0 2023-05-05 07:50:09.986
+!MESSAGE ApexConnection.getApexConnection - exit loaded.  connectionName: antnew, connectionDetails: com.provar.core.model.base.java.ConnectionDetailsImpl@7e3d8be7, thread: OrgBrowserConnect-antnew
+
+!ENTRY com.provar.plugins.sf.eclipse.ui 1 4 2023-05-05 07:50:10.094
+!MESSAGE OrgBrowserView.connect: Showing tab folder  Connection name: antnew, getConnectionCacheState: NotCached
+
+!ENTRY com.provar.plugins.sf.eclipse.ui 1 4 2023-05-05 07:50:10.296
+!MESSAGE OrgBrowserView.connect: Showing tab folder  Connection name: antnew, getConnectionCacheState: NotCached
+
+!ENTRY com.provar.eclipse.ui 1 1 2023-05-05 07:50:14.407
+!MESSAGE Validate test cases - end.  Validated count: 1, skipped count: 0, duration(ms): 8
+
+!ENTRY com.provar.eclipse.ui 1 1 2023-05-05 07:50:51.126
+!MESSAGE Processing new TestCase.  Name:  Test Case 2.testcase, isTestCase: true
+
+!ENTRY com.provar.eclipse.ui 1 1 2023-05-05 07:50:51.205
+!MESSAGE TestCaseSettingsForm.updateControlsWithBelay.  Reason: initial, time: 02:20:51.205
+
+!ENTRY com.provar.eclipse.ui 1 1 2023-05-05 07:50:51.568
+!MESSAGE Allocated test artifacts folder: C:\Users\ADITYA~1.SHA\AppData\Local\Temp\ProvarTestArtifacts7423848667420810105169525207954300
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:50:51.772
+!MESSAGE Starting Chrome IDE WebSocket server.  Port: 56128
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:50:52.056
+!MESSAGE Chrome IDE WebSocket server started successfully.  Port: 56128
+
+!ENTRY com.provar.eclipse.ui 1 1 2023-05-05 07:50:52.056
+!MESSAGE Got Chrome Launch Commandline.  chromeLaunchCommandline: {ideApp} dummyarg {ideArgs}
+
+!ENTRY com.provar.eclipse.ui 1 1 2023-05-05 07:50:52.056
+!MESSAGE Resolved Chrome Launch Commandline.  chromeLaunchCommandline: C:\Program Files\Provar\2.9.1\plugins\com.provar.chrome.ide_2.306.9.0\packaging\provarTestBuilder-win32-x64\provarTestBuilder.exe dummyarg {&quot;provarPort&quot;: 56128,&quot;showDevTools&quot;: false,&quot;showEnhancedXpathEditor&quot;: true,&quot;enableAutomationAPIs&quot;: false}
+
+!ENTRY com.provar.eclipse.ui 1 1 2023-05-05 07:50:52.276
+!MESSAGE Logging Chrome IDE output to file: C:\Users\ADITYA~1.SHA\AppData\Local\Temp\ProvarIde1979243892626456504.txt
+
+!ENTRY com.provar.eclipse.ui 1 1 2023-05-05 07:50:52.291
+!MESSAGE Executed Chrome Launch Commandline.  chromeLaunchCommandline: C:\Program Files\Provar\2.9.1\plugins\com.provar.chrome.ide_2.306.9.0\packaging\provarTestBuilder-win32-x64\provarTestBuilder.exe dummyarg {&quot;provarPort&quot;: 56128,&quot;showDevTools&quot;: false,&quot;showEnhancedXpathEditor&quot;: true,&quot;enableAutomationAPIs&quot;: false}
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:50:52.949
+!MESSAGE Got Chrome IDE request.  method: RemoteTooling.handshakeRequest, msg: {"method":"RemoteTooling.handshakeRequest","messageId":1}
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:50:53.028
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.ChromeIdeImpl$9
+
+!ENTRY com.provar.eclipse.ui 1 1 2023-05-05 07:50:53.028
+!MESSAGE Got RemoteTooling handshake
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:50:53.806
+!MESSAGE Chrome IDE Endpoint opening.
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:50:53.810
+!MESSAGE Got Chrome IDE request.  method: IDE.handshakeRequest, msg: {"method":"IDE.handshakeRequest","messageId":1}
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:50:53.815
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.ChromeIdeImpl$2
+
+!ENTRY com.provar.eclipse.ui 1 1 2023-05-05 07:50:53.818
+!MESSAGE Got Chrome IDE handshake
+
+!ENTRY com.provar.eclipse.ui 1 1 2023-05-05 07:50:53.822
+!MESSAGE Allocated IDE port number: 56150
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:50:53.852
+!MESSAGE Got Chrome IDE request.  method: IDE.getPageControlsRequest, msg: {"messageId":2,"method":"IDE.getPageControlsRequest","sessionId":null,"action":null,"forValues":null,"xpathToParse":null}
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:50:53.854
+!MESSAGE Got Chrome IDE request.  method: IDE.getAvailableWebComponentsRequest, msg: {"messageId":3,"method":"IDE.getAvailableWebComponentsRequest","sessionId":null,"action":null,"forValues":null,"xpathToParse":null}
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:50:53.859
+!MESSAGE Got Chrome IDE request.  method: IDE.getAllAvailableTestApisRequest, msg: {"messageId":4,"method":"IDE.getAllAvailableTestApisRequest","sessionId":null,"action":null,"forValues":null,"xpathToParse":null}
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:50:53.862
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.GetPageControlsHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:50:53.866
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.GetAvailableWebComponentsHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:50:53.869
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.GetAllAvailableTestApisHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:50:56.381
+!MESSAGE Got Chrome IDE request.  method: IDE.requestTestExecutionStatusUpdates, msg: {"messageId":5,"method":"IDE.requestTestExecutionStatusUpdates","sessionId":1,"action":null,"forValues":null,"xpathToParse":null}
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:50:56.385
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.RequestTestExecutionStatusUpdatesHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:50:56.388
+!MESSAGE Got RequestTestExecutionStatusUpdates request.  sessionId: 1
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:50:56.393
+!MESSAGE PowSupport.addTestRunListener - adding listeners for session.  mapSession.getSessionId(): 1
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:51:09.575
+!MESSAGE Got Chrome IDE request.  method: IDE.seleniumHandshakeRequest, msg: {"method":"IDE.seleniumHandshakeRequest","messageId":1,"sessionId":"1","subSessionId":"2"}
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:51:09.584
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.SeleniumHandshakeHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:51:09.588
+!MESSAGE Adding Selenium sub session.  sessionId: 1, subSessionId: 2, endpoint: com.provar.eclipse.chrome.ide.server.SeleniumWebSocketEndpoint@5037b91
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:51:09.602
+!MESSAGE Got Chrome IDE request.  method: Provar.getLocatorStrategiesFromProvar, msg: {"method":"Provar.getLocatorStrategiesFromProvar","messageId":2,"sessionId":"1","subSessionId":"2"}
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:51:09.610
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.GetLocatorStrategiesHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:51:09.884
+!MESSAGE Got Chrome IDE request.  method: IDE.getConnectionDetailsRequest, msg: {"messageId":6,"method":"IDE.getConnectionDetailsRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":null,"connectionName":"antnew:antnew"}
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:51:09.888
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.GetConnectionDetailsHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:51:09.908
+!MESSAGE Got Chrome IDE request.  method: IDE.getDateTimeFormatRequest, msg: {"messageId":7,"method":"IDE.getDateTimeFormatRequest","sessionId":null,"action":null,"forValues":null,"xpathToParse":null,"connectionDetails":{"name":"antnew:antnew","url":"sf:user=aaditya2131@boom.c
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:51:09.931
+!MESSAGE Calling Chrome IDE request handler: com.provar.plugins.forcedotcom.ui.chrome.ide.handlers.GetDateTimeFormatHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:51:51.592
+!MESSAGE Got Chrome IDE request.  method: IDE.requestTestExecutionStatusUpdates, msg: {"messageId":8,"method":"IDE.requestTestExecutionStatusUpdates","sessionId":"1","action":null,"forValues":null,"xpathToParse":null}
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:51:51.597
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.RequestTestExecutionStatusUpdatesHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:51:51.602
+!MESSAGE Got RequestTestExecutionStatusUpdates request.  sessionId: 1
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:51:51.708
+!MESSAGE Got Chrome IDE request.  method: IDE.getPageDetailsRequest, msg: {"messageId":9,"method":"IDE.getPageDetailsRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":null,"connectionDetails":{"name":"antnew:antnew","url":"sf:user=aaditya2131@boom.com;p
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:51:51.721
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.GetPageDetailsHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:52:57.093
+!MESSAGE Got Chrome IDE request.  method: IDE.parseXpathAstRequest, msg: {"messageId":10,"method":"IDE.parseXpathAstRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":"( //div[@id='InlineEditDialogContent']//div[contains(@class, 'inlineEditDiv') or cont
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:52:57.102
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.ParseXpathAstRequestHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:52:57.175
+!MESSAGE Got Chrome IDE request.  method: IDE.validateTestExpressionRequest, msg: {"messageId":11,"method":"IDE.validateTestExpressionRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":null,"expression":"Mr."}
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:52:57.181
+!MESSAGE Got Chrome IDE request.  method: IDE.validateTestExpressionRequest, msg: {"messageId":12,"method":"IDE.validateTestExpressionRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":null,"expression":"Mr."}
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:52:57.186
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.ValidateTestExpressionHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:52:57.191
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.ValidateTestExpressionHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:52:57.276
+!MESSAGE Got Chrome IDE request.  method: IDE.validateTestApiParameterRequest, msg: {"messageId":13,"method":"IDE.validateTestApiParameterRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":null,"testApiId":"com.provar.plugins.forcedotcom.core.ui.UiWithRow","testAp
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:52:57.282
+!MESSAGE Got Chrome IDE request.  method: IDE.validateTestApiParameterRequest, msg: {"messageId":14,"method":"IDE.validateTestApiParameterRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":null,"testApiId":"com.provar.plugins.forcedotcom.core.ui.UiWithRow","testAp
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:52:57.288
+!MESSAGE Got Chrome IDE request.  method: IDE.validateTestApiParameterRequest, msg: {"messageId":15,"method":"IDE.validateTestApiParameterRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":null,"testApiId":"com.provar.plugins.forcedotcom.core.ui.UiWithRow","testAp
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:52:57.294
+!MESSAGE Got Chrome IDE request.  method: IDE.validateTestApiParameterRequest, msg: {"messageId":16,"method":"IDE.validateTestApiParameterRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":null,"testApiId":"com.provar.plugins.forcedotcom.core.ui.UiWithRow","testAp
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:52:57.301
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.ValidateTestApiParameterHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:52:57.307
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.ValidateTestApiParameterHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:52:57.314
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.ValidateTestApiParameterHandler
+
+!ENTRY com.provar.eclipse.ui 4 4 2023-05-05 07:52:57.322
+!MESSAGE Exception generating Xpath Ast.
+
+xpath: ( //div[@id='InlineEditDialogContent']//div[contains(@class, 'inlineEditDiv') or contains(@class, 'inlineEditCompoundDiv')]/table//tr/td[contains(@class,'labelCol') and  ( .//text() = 'Name' or normalize-space(.//text()) = 'Name' or .//text() = 'Salutation' )]/following-sibling::td[1] | //div[contains(@class,'pbBody') and not(//div[@id='InlineEditDialog' and contains(@style, 'visible')])]//div[contains(@class,'pbSubheader') and (h3/text()[not(parent::span)] = 'Contact Information' or translate(normalize-space(h3/text()[not(parent::span)]), ' ', '') = translate(normalize-space('Contact Information'), ' ', ''))]/following-sibling::div[contains(@class,'pbSubsection')][1]/table//tr/td[contains(@class,'labelCol') and  ( .//text() = 'Name' or normalize-space(.//text()) = 'Name' or .//text() = 'Salutation' )]/following-sibling::td[1] ) / java.lang.Exception: SyntaxErrorMessage [message=no viable alternative at input ')', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=no viable alternative at input '(', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=missing ']' at '(', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=no viable alternative at input ')', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=mismatched input '=' expecting ')', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=missing EOF at ''Name'', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null]
+!STACK 0
+java.lang.Exception: SyntaxErrorMessage [message=no viable alternative at input ')', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=no viable alternative at input '(', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=missing ']' at '(', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=no viable alternative at input ')', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=mismatched input '=' expecting ')', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=missing EOF at ''Name'', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null]
+	at com.provar.eclipse.xtext.XpathSupport.throwErrors(XpathSupport.java:198)
+	at com.provar.eclipse.xtext.XpathSupport.parse(XpathSupport.java:42)
+	at com.provar.eclipse.chrome.ide.handlers.ParseXpathAstRequestHandler.handleRequest(ParseXpathAstRequestHandler.java:36)
+	at com.provar.eclipse.chrome.ide.handlers.ParseXpathAstRequestHandler.handleRequest(ParseXpathAstRequestHandler.java:1)
+	at com.provar.eclipse.chrome.ide.server.WebSocketServer.callHandlerOnCurrentThread(WebSocketServer.java:336)
+	at com.provar.eclipse.chrome.ide.server.WebSocketServer.access$0(WebSocketServer.java:307)
+	at com.provar.eclipse.chrome.ide.server.WebSocketServer$1.run(WebSocketServer.java:296)
+	at java.lang.Thread.run(Thread.java:750)
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:52:57.331
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.ValidateTestApiParameterHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 4 4 2023-05-05 07:52:57.335
+!MESSAGE (LH9XLMB4) Invalid Chrome IDE request: Exception generating Xpath Ast.<br/><br/>xpath: ( //div[@id='InlineEditDialogContent']//div[contains(@class, 'inlineEditDiv') or contains(@class, 'inlineEditCompoundDiv')]/table//tr/td[contains(@class,'labelCol') and  ( .//text() = 'Name' or normalize-space(.//text()) = 'Name' or .//text() = 'Salutation' )]/following-sibling::td[1] | //div[contains(@class,'pbBody') and not(//div[@id='InlineEditDialog' and contains(@style, 'visible')])]//div[contains(@class,'pbSubheader') and (h3/text()[not(parent::span)] = 'Contact Information' or translate(normalize-space(h3/text()[not(parent::span)]), ' ', '') = translate(normalize-space('Contact Information'), ' ', ''))]/following-sibling::div[contains(@class,'pbSubsection')][1]/table//tr/td[contains(@class,'labelCol') and  ( .//text() = 'Name' or normalize-space(.//text()) = 'Name' or .//text() = 'Salutation' )]/following-sibling::td[1] )<br/><br/>Details have been logged to the Provar Error Log.
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:53:05.032
+!MESSAGE Got Chrome IDE request.  method: IDE.addUiDoActionStepRequest, msg: {"messageId":17,"method":"IDE.addUiDoActionStepRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":null,"connectionDetails":{"name":"antnew:antnew","url":"sf:user=aaditya2131@boom.c
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:53:05.038
+!MESSAGE Got Chrome IDE request.  method: IDE.requestTestExecutionStatusUpdates, msg: {"messageId":18,"method":"IDE.requestTestExecutionStatusUpdates","sessionId":"1","action":null,"forValues":null,"xpathToParse":null}
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:53:05.050
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.RequestTestExecutionStatusUpdatesHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:53:05.055
+!MESSAGE Got RequestTestExecutionStatusUpdates request.  sessionId: 1
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:53:05.148
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.AddUiDoActionStepHandler
+
+!ENTRY com.provar.eclipse.ui 1 1 2023-05-05 07:53:05.490
+!MESSAGE Validate test cases - end.  Validated count: 1, skipped count: 0, duration(ms): 138
+
+!ENTRY com.provar.eclipse.ui 1 1 2023-05-05 07:53:05.828
+!MESSAGE Validate test cases - end.  Validated count: 2, skipped count: 0, duration(ms): 255
+
+!ENTRY com.provar.eclipse.ui 1 1 2023-05-05 07:53:06.028
+!MESSAGE End of setTestStep.layoutRunnable.  Thread: 1:main, utc: 1683253386027
+
+!ENTRY com.provar.eclipse.ui 1 1 2023-05-05 07:53:06.975
+!MESSAGE End of setTestStep.layoutRunnable.  Thread: 1:main, utc: 1683253386974
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:53:54.449
+!MESSAGE Got Chrome IDE request.  method: IDE.requestTestExecutionStatusUpdates, msg: {"messageId":19,"method":"IDE.requestTestExecutionStatusUpdates","sessionId":"1","action":null,"forValues":null,"xpathToParse":null}
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:53:54.455
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.RequestTestExecutionStatusUpdatesHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:53:54.460
+!MESSAGE Got RequestTestExecutionStatusUpdates request.  sessionId: 1
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:53:54.545
+!MESSAGE Got Chrome IDE request.  method: IDE.parseXpathAstRequest, msg: {"messageId":20,"method":"IDE.parseXpathAstRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":"( //div[@id='InlineEditDialogContent']//div[contains(@class, 'inlineEditDiv') or cont
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:53:54.551
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.ParseXpathAstRequestHandler
+
+!ENTRY com.provar.eclipse.ui 4 4 2023-05-05 07:53:54.562
+!MESSAGE Exception generating Xpath Ast.
+
+xpath: ( //div[@id='InlineEditDialogContent']//div[contains(@class, 'inlineEditDiv') or contains(@class, 'inlineEditCompoundDiv')]/table//tr/td[contains(@class,'labelCol') and  ( .//text() = 'First Name' or normalize-space(.//text()) = 'First Name' )]/following-sibling::td[1] | //div[contains(@class,'pbBody') and not(//div[@id='InlineEditDialog' and contains(@style, 'visible')])]//div[contains(@class,'pbSubheader') and (h3/text()[not(parent::span)] = 'Contact Information' or translate(normalize-space(h3/text()[not(parent::span)]), ' ', '') = translate(normalize-space('Contact Information'), ' ', ''))]/following-sibling::div[contains(@class,'pbSubsection')][1]/table//tr/td[contains(@class,'labelCol') and  ( .//text() = 'First Name' or normalize-space(.//text()) = 'First Name' )]/following-sibling::td[1] ) / java.lang.Exception: SyntaxErrorMessage [message=no viable alternative at input ')', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=no viable alternative at input '(', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=missing ']' at '(', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=no viable alternative at input ')', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=mismatched input '=' expecting ')', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=missing EOF at ''First Name'', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null]
+!STACK 0
+java.lang.Exception: SyntaxErrorMessage [message=no viable alternative at input ')', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=no viable alternative at input '(', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=missing ']' at '(', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=no viable alternative at input ')', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=mismatched input '=' expecting ')', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=missing EOF at ''First Name'', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null]
+	at com.provar.eclipse.xtext.XpathSupport.throwErrors(XpathSupport.java:198)
+	at com.provar.eclipse.xtext.XpathSupport.parse(XpathSupport.java:42)
+	at com.provar.eclipse.chrome.ide.handlers.ParseXpathAstRequestHandler.handleRequest(ParseXpathAstRequestHandler.java:36)
+	at com.provar.eclipse.chrome.ide.handlers.ParseXpathAstRequestHandler.handleRequest(ParseXpathAstRequestHandler.java:1)
+	at com.provar.eclipse.chrome.ide.server.WebSocketServer.callHandlerOnCurrentThread(WebSocketServer.java:336)
+	at com.provar.eclipse.chrome.ide.server.WebSocketServer.access$0(WebSocketServer.java:307)
+	at com.provar.eclipse.chrome.ide.server.WebSocketServer$1.run(WebSocketServer.java:296)
+	at java.lang.Thread.run(Thread.java:750)
+
+!ENTRY com.provar.eclipse.chrome.ide 4 4 2023-05-05 07:53:54.567
+!MESSAGE (LH9XMUGZ) Invalid Chrome IDE request: Exception generating Xpath Ast.<br/><br/>xpath: ( //div[@id='InlineEditDialogContent']//div[contains(@class, 'inlineEditDiv') or contains(@class, 'inlineEditCompoundDiv')]/table//tr/td[contains(@class,'labelCol') and  ( .//text() = 'First Name' or normalize-space(.//text()) = 'First Name' )]/following-sibling::td[1] | //div[contains(@class,'pbBody') and not(//div[@id='InlineEditDialog' and contains(@style, 'visible')])]//div[contains(@class,'pbSubheader') and (h3/text()[not(parent::span)] = 'Contact Information' or translate(normalize-space(h3/text()[not(parent::span)]), ' ', '') = translate(normalize-space('Contact Information'), ' ', ''))]/following-sibling::div[contains(@class,'pbSubsection')][1]/table//tr/td[contains(@class,'labelCol') and  ( .//text() = 'First Name' or normalize-space(.//text()) = 'First Name' )]/following-sibling::td[1] )<br/><br/>Details have been logged to the Provar Error Log.
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:53:54.576
+!MESSAGE Got Chrome IDE request.  method: IDE.validateTestExpressionRequest, msg: {"messageId":21,"method":"IDE.validateTestExpressionRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":null,"expression":"Rahul"}
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:53:54.580
+!MESSAGE Got Chrome IDE request.  method: IDE.validateTestExpressionRequest, msg: {"messageId":22,"method":"IDE.validateTestExpressionRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":null,"expression":"Rahul"}
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:53:54.586
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.ValidateTestExpressionHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:53:54.591
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.ValidateTestExpressionHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:53:54.610
+!MESSAGE Got Chrome IDE request.  method: IDE.validateTestApiParameterRequest, msg: {"messageId":23,"method":"IDE.validateTestApiParameterRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":null,"testApiId":"com.provar.plugins.forcedotcom.core.ui.UiWithRow","testAp
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:53:54.616
+!MESSAGE Got Chrome IDE request.  method: IDE.validateTestApiParameterRequest, msg: {"messageId":24,"method":"IDE.validateTestApiParameterRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":null,"testApiId":"com.provar.plugins.forcedotcom.core.ui.UiWithRow","testAp
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:53:54.620
+!MESSAGE Got Chrome IDE request.  method: IDE.validateTestApiParameterRequest, msg: {"messageId":25,"method":"IDE.validateTestApiParameterRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":null,"testApiId":"com.provar.plugins.forcedotcom.core.ui.UiWithRow","testAp
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:53:54.625
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.ValidateTestApiParameterHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:53:54.632
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.ValidateTestApiParameterHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:53:54.648
+!MESSAGE Got Chrome IDE request.  method: IDE.validateTestApiParameterRequest, msg: {"messageId":26,"method":"IDE.validateTestApiParameterRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":null,"testApiId":"com.provar.plugins.forcedotcom.core.ui.UiWithRow","testAp
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:53:54.652
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.ValidateTestApiParameterHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:53:54.658
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.ValidateTestApiParameterHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:53:57.734
+!MESSAGE Got Chrome IDE request.  method: IDE.addUiDoActionStepRequest, msg: {"messageId":27,"method":"IDE.addUiDoActionStepRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":null,"connectionDetails":{"name":"antnew:antnew","url":"sf:user=aaditya2131@boom.c
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:53:57.737
+!MESSAGE Got Chrome IDE request.  method: IDE.requestTestExecutionStatusUpdates, msg: {"messageId":28,"method":"IDE.requestTestExecutionStatusUpdates","sessionId":"1","action":null,"forValues":null,"xpathToParse":null}
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:53:57.740
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.RequestTestExecutionStatusUpdatesHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:53:57.742
+!MESSAGE Got RequestTestExecutionStatusUpdates request.  sessionId: 1
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:53:57.788
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.AddUiDoActionStepHandler
+
+!ENTRY com.provar.eclipse.ui 1 1 2023-05-05 07:53:58.039
+!MESSAGE Validate test cases - end.  Validated count: 1, skipped count: 0, duration(ms): 157
+
+!ENTRY com.provar.eclipse.ui 1 1 2023-05-05 07:54:00.689
+!MESSAGE End of setTestStep.layoutRunnable.  Thread: 1:main, utc: 1683253440688
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:54:33.844
+!MESSAGE Got Chrome IDE request.  method: IDE.requestTestExecutionStatusUpdates, msg: {"messageId":29,"method":"IDE.requestTestExecutionStatusUpdates","sessionId":"1","action":null,"forValues":null,"xpathToParse":null}
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:54:33.850
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.RequestTestExecutionStatusUpdatesHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:54:33.857
+!MESSAGE Got RequestTestExecutionStatusUpdates request.  sessionId: 1
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:54:33.926
+!MESSAGE Got Chrome IDE request.  method: IDE.parseXpathAstRequest, msg: {"messageId":30,"method":"IDE.parseXpathAstRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":"( //div[@id='InlineEditDialogContent']//div[contains(@class, 'inlineEditDiv') or cont
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:54:33.933
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.ParseXpathAstRequestHandler
+
+!ENTRY com.provar.eclipse.ui 4 4 2023-05-05 07:54:33.945
+!MESSAGE Exception generating Xpath Ast.
+
+xpath: ( //div[@id='InlineEditDialogContent']//div[contains(@class, 'inlineEditDiv') or contains(@class, 'inlineEditCompoundDiv')]/table//tr/td[contains(@class,'labelCol') and  ( .//text() = 'Last Name' or normalize-space(.//text()) = 'Last Name' )]/following-sibling::td[1] | //div[contains(@class,'pbBody') and not(//div[@id='InlineEditDialog' and contains(@style, 'visible')])]//div[contains(@class,'pbSubheader') and (h3/text()[not(parent::span)] = 'Contact Information' or translate(normalize-space(h3/text()[not(parent::span)]), ' ', '') = translate(normalize-space('Contact Information'), ' ', ''))]/following-sibling::div[contains(@class,'pbSubsection')][1]/table//tr/td[contains(@class,'labelCol') and  ( .//text() = 'Last Name' or normalize-space(.//text()) = 'Last Name' )]/following-sibling::td[1] ) / java.lang.Exception: SyntaxErrorMessage [message=no viable alternative at input ')', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=no viable alternative at input '(', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=missing ']' at '(', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=no viable alternative at input ')', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=mismatched input '=' expecting ')', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=missing EOF at ''Last Name'', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null]
+!STACK 0
+java.lang.Exception: SyntaxErrorMessage [message=no viable alternative at input ')', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=no viable alternative at input '(', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=missing ']' at '(', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=no viable alternative at input ')', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=mismatched input '=' expecting ')', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=missing EOF at ''Last Name'', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null]
+	at com.provar.eclipse.xtext.XpathSupport.throwErrors(XpathSupport.java:198)
+	at com.provar.eclipse.xtext.XpathSupport.parse(XpathSupport.java:42)
+	at com.provar.eclipse.chrome.ide.handlers.ParseXpathAstRequestHandler.handleRequest(ParseXpathAstRequestHandler.java:36)
+	at com.provar.eclipse.chrome.ide.handlers.ParseXpathAstRequestHandler.handleRequest(ParseXpathAstRequestHandler.java:1)
+	at com.provar.eclipse.chrome.ide.server.WebSocketServer.callHandlerOnCurrentThread(WebSocketServer.java:336)
+	at com.provar.eclipse.chrome.ide.server.WebSocketServer.access$0(WebSocketServer.java:307)
+	at com.provar.eclipse.chrome.ide.server.WebSocketServer$1.run(WebSocketServer.java:296)
+	at java.lang.Thread.run(Thread.java:750)
+
+!ENTRY com.provar.eclipse.chrome.ide 4 4 2023-05-05 07:54:33.951
+!MESSAGE (LH9XNOUY) Invalid Chrome IDE request: Exception generating Xpath Ast.<br/><br/>xpath: ( //div[@id='InlineEditDialogContent']//div[contains(@class, 'inlineEditDiv') or contains(@class, 'inlineEditCompoundDiv')]/table//tr/td[contains(@class,'labelCol') and  ( .//text() = 'Last Name' or normalize-space(.//text()) = 'Last Name' )]/following-sibling::td[1] | //div[contains(@class,'pbBody') and not(//div[@id='InlineEditDialog' and contains(@style, 'visible')])]//div[contains(@class,'pbSubheader') and (h3/text()[not(parent::span)] = 'Contact Information' or translate(normalize-space(h3/text()[not(parent::span)]), ' ', '') = translate(normalize-space('Contact Information'), ' ', ''))]/following-sibling::div[contains(@class,'pbSubsection')][1]/table//tr/td[contains(@class,'labelCol') and  ( .//text() = 'Last Name' or normalize-space(.//text()) = 'Last Name' )]/following-sibling::td[1] )<br/><br/>Details have been logged to the Provar Error Log.
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:54:33.969
+!MESSAGE Got Chrome IDE request.  method: IDE.validateTestExpressionRequest, msg: {"messageId":31,"method":"IDE.validateTestExpressionRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":null,"expression":"khanna"}
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:54:33.975
+!MESSAGE Got Chrome IDE request.  method: IDE.validateTestExpressionRequest, msg: {"messageId":32,"method":"IDE.validateTestExpressionRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":null,"expression":"khanna"}
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:54:33.979
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.ValidateTestExpressionHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:54:33.983
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.ValidateTestExpressionHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:54:34.017
+!MESSAGE Got Chrome IDE request.  method: IDE.validateTestApiParameterRequest, msg: {"messageId":33,"method":"IDE.validateTestApiParameterRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":null,"testApiId":"com.provar.plugins.forcedotcom.core.ui.UiWithRow","testAp
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:54:34.020
+!MESSAGE Got Chrome IDE request.  method: IDE.validateTestApiParameterRequest, msg: {"messageId":34,"method":"IDE.validateTestApiParameterRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":null,"testApiId":"com.provar.plugins.forcedotcom.core.ui.UiWithRow","testAp
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:54:34.024
+!MESSAGE Got Chrome IDE request.  method: IDE.validateTestApiParameterRequest, msg: {"messageId":35,"method":"IDE.validateTestApiParameterRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":null,"testApiId":"com.provar.plugins.forcedotcom.core.ui.UiWithRow","testAp
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:54:34.027
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.ValidateTestApiParameterHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:54:34.032
+!MESSAGE Got Chrome IDE request.  method: IDE.validateTestApiParameterRequest, msg: {"messageId":36,"method":"IDE.validateTestApiParameterRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":null,"testApiId":"com.provar.plugins.forcedotcom.core.ui.UiWithRow","testAp
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:54:34.038
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.ValidateTestApiParameterHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:54:34.044
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.ValidateTestApiParameterHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:54:34.049
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.ValidateTestApiParameterHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:54:36.732
+!MESSAGE Got Chrome IDE request.  method: IDE.addUiDoActionStepRequest, msg: {"messageId":37,"method":"IDE.addUiDoActionStepRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":null,"connectionDetails":{"name":"antnew:antnew","url":"sf:user=aaditya2131@boom.c
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:54:36.738
+!MESSAGE Got Chrome IDE request.  method: IDE.requestTestExecutionStatusUpdates, msg: {"messageId":38,"method":"IDE.requestTestExecutionStatusUpdates","sessionId":"1","action":null,"forValues":null,"xpathToParse":null}
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:54:36.743
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.RequestTestExecutionStatusUpdatesHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:54:36.748
+!MESSAGE Got RequestTestExecutionStatusUpdates request.  sessionId: 1
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:54:36.793
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.AddUiDoActionStepHandler
+
+!ENTRY com.provar.eclipse.ui 1 1 2023-05-05 07:54:37.132
+!MESSAGE Validate test cases - end.  Validated count: 1, skipped count: 0, duration(ms): 244
+
+!ENTRY com.provar.eclipse.ui 1 1 2023-05-05 07:54:38.055
+!MESSAGE End of setTestStep.layoutRunnable.  Thread: 1:main, utc: 1683253478054
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:55:08.796
+!MESSAGE Got Chrome IDE request.  method: IDE.requestTestExecutionStatusUpdates, msg: {"messageId":39,"method":"IDE.requestTestExecutionStatusUpdates","sessionId":"1","action":null,"forValues":null,"xpathToParse":null}
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:55:08.802
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.RequestTestExecutionStatusUpdatesHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:55:08.806
+!MESSAGE Got RequestTestExecutionStatusUpdates request.  sessionId: 1
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:55:08.869
+!MESSAGE Got Chrome IDE request.  method: IDE.parseXpathAstRequest, msg: {"messageId":40,"method":"IDE.parseXpathAstRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":"( //div[@id='InlineEditDialogContent']//div[contains(@class, 'inlineEditDiv') or cont
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:55:08.876
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.ParseXpathAstRequestHandler
+
+!ENTRY com.provar.eclipse.ui 4 4 2023-05-05 07:55:08.888
+!MESSAGE Exception generating Xpath Ast.
+
+xpath: ( //div[@id='InlineEditDialogContent']//div[contains(@class, 'inlineEditDiv') or contains(@class, 'inlineEditCompoundDiv')]/table//tr/td[contains(@class,'labelCol') and  ( .//text() = 'Phone' or normalize-space(.//text()) = 'Phone' )]/following-sibling::td[1] | //div[contains(@class,'pbBody') and not(//div[@id='InlineEditDialog' and contains(@style, 'visible')])]//div[contains(@class,'pbSubheader') and (h3/text()[not(parent::span)] = 'Contact Information' or translate(normalize-space(h3/text()[not(parent::span)]), ' ', '') = translate(normalize-space('Contact Information'), ' ', ''))]/following-sibling::div[contains(@class,'pbSubsection')][1]/table//tr/td[contains(@class,'labelCol') and  ( .//text() = 'Phone' or normalize-space(.//text()) = 'Phone' )]/following-sibling::td[1] ) / java.lang.Exception: SyntaxErrorMessage [message=no viable alternative at input ')', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=no viable alternative at input '(', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=missing ']' at '(', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=no viable alternative at input ')', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=mismatched input '=' expecting ')', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=missing EOF at ''Phone'', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null]
+!STACK 0
+java.lang.Exception: SyntaxErrorMessage [message=no viable alternative at input ')', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=no viable alternative at input '(', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=missing ']' at '(', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=no viable alternative at input ')', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=mismatched input '=' expecting ')', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null], SyntaxErrorMessage [message=missing EOF at ''Phone'', issueCode=org.eclipse.xtext.diagnostics.Diagnostic.Syntax, issueData=null]
+	at com.provar.eclipse.xtext.XpathSupport.throwErrors(XpathSupport.java:198)
+	at com.provar.eclipse.xtext.XpathSupport.parse(XpathSupport.java:42)
+	at com.provar.eclipse.chrome.ide.handlers.ParseXpathAstRequestHandler.handleRequest(ParseXpathAstRequestHandler.java:36)
+	at com.provar.eclipse.chrome.ide.handlers.ParseXpathAstRequestHandler.handleRequest(ParseXpathAstRequestHandler.java:1)
+	at com.provar.eclipse.chrome.ide.server.WebSocketServer.callHandlerOnCurrentThread(WebSocketServer.java:336)
+	at com.provar.eclipse.chrome.ide.server.WebSocketServer.access$0(WebSocketServer.java:307)
+	at com.provar.eclipse.chrome.ide.server.WebSocketServer$1.run(WebSocketServer.java:296)
+	at java.lang.Thread.run(Thread.java:750)
+
+!ENTRY com.provar.eclipse.chrome.ide 4 4 2023-05-05 07:55:08.894
+!MESSAGE (LH9XOFTL) Invalid Chrome IDE request: Exception generating Xpath Ast.<br/><br/>xpath: ( //div[@id='InlineEditDialogContent']//div[contains(@class, 'inlineEditDiv') or contains(@class, 'inlineEditCompoundDiv')]/table//tr/td[contains(@class,'labelCol') and  ( .//text() = 'Phone' or normalize-space(.//text()) = 'Phone' )]/following-sibling::td[1] | //div[contains(@class,'pbBody') and not(//div[@id='InlineEditDialog' and contains(@style, 'visible')])]//div[contains(@class,'pbSubheader') and (h3/text()[not(parent::span)] = 'Contact Information' or translate(normalize-space(h3/text()[not(parent::span)]), ' ', '') = translate(normalize-space('Contact Information'), ' ', ''))]/following-sibling::div[contains(@class,'pbSubsection')][1]/table//tr/td[contains(@class,'labelCol') and  ( .//text() = 'Phone' or normalize-space(.//text()) = 'Phone' )]/following-sibling::td[1] )<br/><br/>Details have been logged to the Provar Error Log.
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:55:08.900
+!MESSAGE Got Chrome IDE request.  method: IDE.validateTestExpressionRequest, msg: {"messageId":41,"method":"IDE.validateTestExpressionRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":null,"expression":"986565367437"}
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:55:08.905
+!MESSAGE Got Chrome IDE request.  method: IDE.validateTestExpressionRequest, msg: {"messageId":42,"method":"IDE.validateTestExpressionRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":null,"expression":"986565367437"}
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:55:08.911
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.ValidateTestExpressionHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:55:08.915
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.ValidateTestExpressionHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:55:08.934
+!MESSAGE Got Chrome IDE request.  method: IDE.validateTestApiParameterRequest, msg: {"messageId":43,"method":"IDE.validateTestApiParameterRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":null,"testApiId":"com.provar.plugins.forcedotcom.core.ui.UiWithRow","testAp
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:55:08.938
+!MESSAGE Got Chrome IDE request.  method: IDE.validateTestApiParameterRequest, msg: {"messageId":44,"method":"IDE.validateTestApiParameterRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":null,"testApiId":"com.provar.plugins.forcedotcom.core.ui.UiWithRow","testAp
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:55:08.948
+!MESSAGE Got Chrome IDE request.  method: IDE.validateTestApiParameterRequest, msg: {"messageId":45,"method":"IDE.validateTestApiParameterRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":null,"testApiId":"com.provar.plugins.forcedotcom.core.ui.UiWithRow","testAp
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:55:08.952
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.ValidateTestApiParameterHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:55:08.963
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.ValidateTestApiParameterHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:55:08.967
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.ValidateTestApiParameterHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:55:08.973
+!MESSAGE Got Chrome IDE request.  method: IDE.validateTestApiParameterRequest, msg: {"messageId":46,"method":"IDE.validateTestApiParameterRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":null,"testApiId":"com.provar.plugins.forcedotcom.core.ui.UiWithRow","testAp
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:55:08.988
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.ValidateTestApiParameterHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:55:12.528
+!MESSAGE Got Chrome IDE request.  method: IDE.addUiDoActionStepRequest, msg: {"messageId":47,"method":"IDE.addUiDoActionStepRequest","sessionId":"1","action":null,"forValues":null,"xpathToParse":null,"connectionDetails":{"name":"antnew:antnew","url":"sf:user=aaditya2131@boom.c
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:55:12.533
+!MESSAGE Got Chrome IDE request.  method: IDE.requestTestExecutionStatusUpdates, msg: {"messageId":48,"method":"IDE.requestTestExecutionStatusUpdates","sessionId":"1","action":null,"forValues":null,"xpathToParse":null}
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:55:12.538
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.RequestTestExecutionStatusUpdatesHandler
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:55:12.542
+!MESSAGE Got RequestTestExecutionStatusUpdates request.  sessionId: 1
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:55:12.562
+!MESSAGE Calling Chrome IDE request handler: com.provar.eclipse.chrome.ide.handlers.AddUiDoActionStepHandler
+
+!ENTRY com.provar.eclipse.ui 1 1 2023-05-05 07:55:12.897
+!MESSAGE Validate test cases - end.  Validated count: 1, skipped count: 0, duration(ms): 249
+
+!ENTRY com.provar.eclipse.ui 1 1 2023-05-05 07:55:13.867
+!MESSAGE End of setTestStep.layoutRunnable.  Thread: 1:main, utc: 1683253513866
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:56:05.621
+!MESSAGE Chrome IDE Endpoint closing.
+
+!ENTRY com.provar.eclipse.ui 1 1 2023-05-05 07:56:05.625
+!MESSAGE Stopping Chrome IDE because of WebSocket disconnection.
+
+!ENTRY com.provar.eclipse.chrome.ide 1 1 2023-05-05 07:56:05.630
+!MESSAGE Chrome IDE heartbeat listener exiting
+
+!ENTRY com.provar.eclipse.chrome.ide 4 4 2023-05-05 07:56:09.323
+!MESSAGE (LH9XPQGB) sendTestExecutionStatusUpdate: The requested sessionId was not found.  SessionId: 1
+
+!ENTRY com.provar.eclipse.chrome.ide 4 4 2023-05-05 07:56:09.334
+!MESSAGE (LH9XPQGG) sendTestExecutionStatusUpdate: The requested sessionId was not found.  SessionId: 1
+
+!ENTRY com.provar.eclipse.chrome.ide 4 4 2023-05-05 07:56:14.344
+!MESSAGE (LH9XPUBR) Chrome IDE Send: Timeout waiting for Chrome IDE endpoint.  Request: IDE.sessionEnded
+
+!ENTRY org.eclipse.ui 2 2 2023-05-05 07:58:38.712
+!MESSAGE Invalid property category path: ValidationPropertiesPage (bundle: org.eclipse.wst.json.ui, propertyPage: org.eclipse.wst.json.ui.propertyPage.project.validation)
