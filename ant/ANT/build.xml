@@ -38,8 +38,8 @@
 			<fileset id="testcases" dir="../tests"></fileset>
 
 		</Run-Test-Case>
-
- <target name="compile">
-    <echo message="Hello provar!"/>
-  </target>
+	</target>
+	 <target name="compile">
+	    <echo message="Hello provar!"/>
+	  </target>
 </project>
